@@ -2,7 +2,7 @@ const inputTag = document.querySelector("input");
 
 const texTag = document.querySelector("span");
 
-const fontSizeControl = () => {
+const fontSizeControl = (e) => {
   console.log(inputTag.value);
   texTag.style.fontSize = inputTag.value + "px";
 };
