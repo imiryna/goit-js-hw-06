@@ -6,13 +6,16 @@ function handleSubmit(event) {
   event.preventDefault();
   let dataFromForm = {};
 
-  // const formData = new FormData(event.currentTarget);
-  for (let [key, value] of event.) {
-    if (!value) {
-      alert(`Where is my data of ${key}`);
-      break;
-    }
-    dataFromForm[key] = value;
+  if (event.currentTarget.elements.email) {
+    dataFromForm.email = event.currentTarget.elements.email;
+  } else {
+    alert("No email");
+  }
+
+  if (event.currentTarget.elements.password) {
+    dataFromForm.password = event.currentTarget.elements.password;
+  } else {
+    alert("No password");
   }
   console.log(dataFromForm);
   formEl.reset();
